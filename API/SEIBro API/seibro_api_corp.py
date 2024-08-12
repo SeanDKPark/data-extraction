@@ -27,7 +27,7 @@ def ResponseToDf(response):
     df = pd.DataFrame(rows)
     return df
 
-def getIssucoCustnoByIsin(key, ISIN, SHOTN_ISIN):
+def getIssucoCustnoByIsin(key, ISIN = '', SHOTN_ISIN = ''):
     apiID = 'getIssucoCustnoByIsin'
     ISIN_param = 'ISIN:' + ISIN
     SHOTN_ISIN_param = 'SHOTN_ISIN:' + SHOTN_ISIN
@@ -66,7 +66,7 @@ def getStddtInfo(key, ISSUCO_CUSTNO, BEGIN_STD_DT, EXPRY_STD_DT = None, RGT_RACD
     result_df = ResponseToDf(response)
     return result_df
 
-def getGmeetInfo(key, ISSUCO_CUSTNO, ISSUIN_NO, RGT_STD_DT):
+def getGmeetInfo(key, RGT_STD_DT, ISSUCO_CUSTNO = '', ISSUIN_NO = ''):
     apiID = 'getGmeetInfo'
     ISSUCO_CUSTNO_param = 'ISSUCO_CUSTNO:' + ISSUCO_CUSTNO
     ISSUIN_NO_param = 'ISSUIN_NO:' + ISSUIN_NO
@@ -84,7 +84,7 @@ def getGmeetInfo(key, ISSUCO_CUSTNO, ISSUIN_NO, RGT_STD_DT):
     result_df = ResponseToDf(response)
     return result_df
 
-def getGmeetMeasureInfo(key, ISSUCO_CUSTNO, ISSUIN_NO, RGT_STD_DT):
+def getGmeetMeasureInfo(key, RGT_STD_DT, ISSUCO_CUSTNO = '', ISSUIN_NO = ''):
     apiID = 'getGmeetMeasureInfo'
     ISSUCO_CUSTNO_param = 'ISSUCO_CUSTNO:' + ISSUCO_CUSTNO
     ISSUIN_NO_param = 'ISSUIN_NO:' + ISSUIN_NO
@@ -102,7 +102,7 @@ def getGmeetMeasureInfo(key, ISSUCO_CUSTNO, ISSUIN_NO, RGT_STD_DT):
     result_df = ResponseToDf(response)
     return result_df
 
-def getFmnmAltInfo(key, ISSUCO_CUSTNO, RGT_STD_DT):
+def getFmnmAltInfo(key, ISSUCO_CUSTNO = '', RGT_STD_DT = ''):
     apiID = 'getFmnmAltInfo'
     ISSUCO_CUSTNO_param = 'ISSUCO_CUSTNO:' + ISSUCO_CUSTNO
     RGT_STD_DT_param = 'RGT_STD_DT:' + RGT_STD_DT
@@ -209,7 +209,7 @@ RGT_RACD_1 = '001'
 ISSUIN_NO_1 = '00593'
 RGT_STD_DT_1 = '20171231'
 ISSUCO_CUSTNO_2 = '3572'
-RGT_STD_DT_1 = '20151001'
+RGT_STD_DT_2 = '20151001'
 TH1_PAY_TERM_BEGIN_DT_1 = '20180720'
 PAY_COST_TPCD_1 = '3'
 RGT_RSN_DTAIL_SORT_CD_1 = '02'
@@ -220,11 +220,11 @@ TH1_PAY_TERM_BEGIN_DT_2 = '20180709'
 # print(getIssucoCustnoByIsin(key, ISIN_1, SHOTN_ISIN_1))
 # print(getStddtInfo(key, ISSUCO_CUSTNO_1, BEGIN_STD_DT_1))
 # print(getStddtInfo(key, ISSUCO_CUSTNO_1, BEGIN_STD_DT_1, EXPRY_STD_DT_1, RGT_RACD_1))
-# print(getGmeetInfo(key, ISSUCO_CUSTNO_1, ISSUIN_NO_1, RGT_STD_DT_1))
-# print(getGmeetMeasureInfo(key, ISSUCO_CUSTNO_1, ISSUIN_NO_1, RGT_STD_DT_1))
-# print(getFmnmAltInfo(key, ISSUCO_CUSTNO_2, RGT_STD_DT_1))
+# print(getGmeetInfo(key, RGT_STD_DT_1, ISSUCO_CUSTNO_1, ISSUIN_NO_1))
+# print(getGmeetMeasureInfo(key, RGT_STD_DT_1, ISSUCO_CUSTNO_1, ISSUIN_NO_1))
+# print(getFmnmAltInfo(key, ISSUCO_CUSTNO_2, RGT_STD_DT_2))
 # print(getCostPaySchedul(key, TH1_PAY_TERM_BEGIN_DT_1, PAY_COST_TPCD_1))
 # print(getDivSchedulInfo(key, BEGIN_STD_DT_1))
 # print(getDivSchedulInfo(key, BEGIN_STD_DT_1, ISSUCO_CUSTNO_1, EXPRY_STD_DT_1, RGT_RSN_DTAIL_SORT_CD_1))
-print(getDivInfo(key, ISSUCO_CUSTNO_1, BEGIN_STD_DT_1, EXPRY_STD_DT_1))
+# print(getDivInfo(key, ISSUCO_CUSTNO_1, BEGIN_STD_DT_1, EXPRY_STD_DT_1))
 # print(getOddLotInfo(key, ISSUCO_CUSTNO_3, TH1_PAY_TERM_BEGIN_DT_2))

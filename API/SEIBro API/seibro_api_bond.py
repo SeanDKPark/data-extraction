@@ -27,7 +27,7 @@ def ResponseToDf(response):
     df = pd.DataFrame(rows)
     return df
 
-def getBondIssuInfo(key, ISSU_DT, ISSUCO_CUSTNO):
+def getBondIssuInfo(key, ISSU_DT = '', ISSUCO_CUSTNO = ''):
     apiID = 'getBondIssuInfo'
     ISSU_DT_param = 'ISSU_DT:' + ISSU_DT
     ISSUCO_CUSTNO_param = 'ISSUCO_CUSTNO:' + ISSUCO_CUSTNO
@@ -76,7 +76,7 @@ def getIntPayInfo(key, ISIN):
     result_df = ResponseToDf(response)
     return result_df
 
-def getBondOptionXrcInfo(key, ISIN, ERLY_RED_DT):
+def getBondOptionXrcInfo(key, ISIN = '', ERLY_RED_DT = ''):
     apiID = 'getBondOptionXrcInfo'
     ISIN_param = 'ISIN:' + ISIN
     ERLY_RED_DT_param = 'ERLY_RED_DT:' + ERLY_RED_DT
@@ -174,11 +174,11 @@ isin5 = 'KRZF30300A87'
 isin6 = 'KRZS24449010'
 
 #TEST
-print(getBondIssuInfo(key, issu_dt1, issuco_custno1))
-print(getBondStatInfo(key, isin1))
-print(getIntPayInfo(key, isin2))
-print(getBondOptionXrcInfo(key, isin3, erly_red_dt1))
-print(getShortmIssuInfo(key, issu_dt2, secn_tpcd1))
-print(getCDInfo(key, isin4))
-print(getCPInfo(key, isin5))
-print(getESTBInfo(key, isin6))
+# print(getBondIssuInfo(key, issu_dt1, issuco_custno1))
+# print(getBondStatInfo(key, isin1))
+# print(getIntPayInfo(key, isin2))
+# print(getBondOptionXrcInfo(key, isin3, erly_red_dt1))
+# print(getShortmIssuInfo(key, issu_dt2, secn_tpcd1))
+# print(getCDInfo(key, isin4))
+# print(getCPInfo(key, isin5))
+# print(getESTBInfo(key, isin6))

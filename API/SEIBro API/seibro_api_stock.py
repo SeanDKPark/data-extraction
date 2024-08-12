@@ -27,7 +27,7 @@ def ResponseToDf(response):
     df = pd.DataFrame(rows)
     return df
 
-def getStkStatInfo(key, SHOTN_ISIN, ISIN, ISSUCO_CUSTNO, STD_DT = None):
+def getStkStatInfo(key, SHOTN_ISIN = '', ISIN = '', ISSUCO_CUSTNO = '', STD_DT = None):
     apiID = 'getStkStatInfo'
     SHOTN_ISIN_param = 'SHOTN_ISIN:' + SHOTN_ISIN
     ISIN_param = 'ISIN:' + ISIN
@@ -119,7 +119,7 @@ def getStkListInfo(key, ALT_BEGIN_DT, ALT_EXPRY_DT):
     result_df = ResponseToDf(response)
     return result_df
 
-def getXrcStkStatInfo(key, BOND_ISIN, XRC_STK_ISIN):
+def getXrcStkStatInfo(key, BOND_ISIN = '', XRC_STK_ISIN = ''):
     apiID = 'getXrcStkStatInfo'
     BOND_ISIN_param = 'BOND_ISIN:' + BOND_ISIN
     XRC_STK_ISIN_param = 'XRC_STK_ISIN:' + XRC_STK_ISIN
@@ -136,7 +136,7 @@ def getXrcStkStatInfo(key, BOND_ISIN, XRC_STK_ISIN):
     result_df = ResponseToDf(response)
     return result_df
 
-def getXrcStkOptionXrcInfo(key, RGT_STD_DT, BOND_ISIN, XRC_POSS_BEGIN_DT):
+def getXrcStkOptionXrcInfo(key, RGT_STD_DT = '', BOND_ISIN = '', XRC_POSS_BEGIN_DT = ''):
     apiID = 'getXrcStkOptionXrcInfo'
     RGT_STD_DT_param = 'RGT_STD_DT:' + RGT_STD_DT
     BOND_ISIN_param = 'BOND_ISIN:' + BOND_ISIN
@@ -154,7 +154,7 @@ def getXrcStkOptionXrcInfo(key, RGT_STD_DT, BOND_ISIN, XRC_POSS_BEGIN_DT):
     result_df = ResponseToDf(response)
     return result_df
 
-def getStkIncdecDetails(key, SHOTN_ISIN, ISIN, ISSUCO_CUSTNO, ISSU_YEAR = None):
+def getStkIncdecDetails(key, SHOTN_ISIN = '', ISIN = '', ISSUCO_CUSTNO = '', ISSU_YEAR = None):
     apiID = 'getStkIncdecDetails'
     SHOTN_ISIN_param = 'SHOTN_ISIN:' + SHOTN_ISIN
     ISIN_param = 'ISIN:' + ISIN
@@ -232,7 +232,7 @@ MART_TPCD_2 = '11'
 # print(getSlbDealingByIsin(key, ISIN_3, STD_DT_3))
 # print(getShotnByMart(key, MART_TPCD_1))
 # print(getStkListInfo(key, ALT_BEGIN_DT_1, ALT_EXPRY_DT_1))
-# print(getXrcStkStatInfo(key, BOND_ISIN_1, XRC_STK_ISIN)) ## 이거 찾아서 한번 체크
-# print(getXrcStkOptionXrcInfo(key, RGT_STD_DT_1, BOND_ISIN_2, XRC_POSS_BEGIN_DT_1)) #이거도
+# print(getXrcStkStatInfo(key, BOND_ISIN_1, XRC_STK_ISIN))
+# print(getXrcStkOptionXrcInfo(key, RGT_STD_DT_1, BOND_ISIN_2, XRC_POSS_BEGIN_DT_1))
 # print(getStkIncdecDetails(key, SHOTN_ISIN_1, ISIN_1, ISSUCO_CUSTNO_1, ISSU_YEAR_1))
 # print(getSafeDpDutyDepoStatus(key, BEGIN_DT_1, EXPRY_DT_1, BIZ_TPCD_1, None, MART_TPCD_2))
