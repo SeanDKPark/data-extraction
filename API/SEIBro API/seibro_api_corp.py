@@ -197,7 +197,7 @@ def getOddLotInfo(key, ISSUCO_CUSTNO, TH1_PAY_TERM_BEGIN_DT):
     result_df = ResponseToDf(response)
     return result_df
 
-key = '9511094f04b80fa9ad0d98e80063b7e8a1321d59cd2fc58aea9aff42ac3e8c9c'
+key = '' # Enter API Key
 
 #Sample Data
 ISIN_1 = 'KR7005930003'

@@ -199,7 +199,7 @@ def getSafeDpDutyDepoStatus(key, BEGIN_DT, EXPRY_DT, BIZ_TPCD, ISSUCO_CUSTNO = N
     result_df = ResponseToDf(response)
     return result_df
 
-key = '9511094f04b80fa9ad0d98e80063b7e8a1321d59cd2fc58aea9aff42ac3e8c9c'
+key = '' # Enter API Key
 
 #Sample Data
 SHOTN_ISIN_1 = '005930'
